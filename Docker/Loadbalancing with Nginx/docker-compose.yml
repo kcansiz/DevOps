@@ -1,0 +1,14 @@
+services:
+  web1:
+    build: ./web1
+    ports:
+      - "5000:80"
+  web2:
+    build: ./web2
+    ports:
+      - "4000:80"
+    
+  load_balancer:
+    build: ./LoadBalancer    
+    ports:
+      - "7000:80"

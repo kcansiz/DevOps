@@ -1,0 +1,24 @@
+services:
+  web1:
+   build: ./website1
+   container_name: web1
+   ports:
+     - "81:80"
+
+  web2:
+   build: ./website2
+   container_name: web2
+   ports:
+     - "82:80"
+
+  web3:
+   build: ./website3
+   container_name: web3
+   ports:
+     - "83:80"
+
+  loadbalancer:
+   build: ./loadbalancer
+   container_name: loadbalancer
+   ports:
+     - "84:80"
